@@ -5,7 +5,7 @@ def displayPathtoPrincess(n,grid):
   # set at n = 3 (3x3 grid)
   # need to integrate the 0 as an iterable
   # so that the grid size can change
-  # coordinates 0,0 break also...
+  # coordinates 0,0 break also... 
   
   center = [n - (2 + 0), n - (2 + 0)]
   
