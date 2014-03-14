@@ -19,33 +19,35 @@ class Zelda:
     direction_horizontal = "off"
 
     # move from the center
-    mv1, mv2 = center[0], target[0]
-    mh1, mh2 = center[1], target[1]
+    mv1, mv2 = self.center[0], self.target[0]
+    mh1, mh2 = self.center[1], self.target[1]
 
     move_vertical = mv1 - mv2
     move_horizontal = mh1 - mh2
 
-    #directions = []
+    directions = []
 
     if move_vertical < 0:
-      direction_vertical = "LEFT"
+      direction_vertical = "RIGHT"
       steps_vertical = -(move_vertical)
     else:
-      direction_vertical = "RIGHT"
+      direction_vertical = "LEFT"
       steps_vertical = move_vertical
 
     if move_horizontal < 0:
-      direction_horizontal = "UP"
+      direction_horizontal = "DOWN"
       steps_horizontal = -(move_horizontal)
     else:
-      direction_horizontal = "DOWN"
+      direction_horizontal = "UP"
       steps_horizontal = move_horizontal
 
     for i in range(steps_vertical):
-      print direction_vertical
+      directions.append(direction_vertical)
 
     for j in range(steps_horizontal):
-      print direction_horizontal
+      directions.append(direction_horizontal)
+      
+    return directions
 
 
   def findCenter(self, gridsize, adj, target):
